@@ -1,0 +1,26 @@
+{
+  "name": "com.choroidstudio.input",
+  "version": "1.2.3",
+  "displayName": "Choroid Input System",
+  "description": "This is an example package",
+  "unity": "2020.2",
+  "unityRelease": "0b5",
+  "documentationUrl": "https://example.com/",
+  "changelogUrl": "https://example.com/changelog.html",
+  "licensesUrl": "https://example.com/licensing.html",
+  "dependencies": {
+    "com.unity.inputsystem": "1.2.0"
+  },
+  "keywords": [
+    "Choroid",
+    "ChoroidVR",
+    "ChoroidVRInput"
+  ],
+  "author": {
+    "name": "ChoroidStudio",
+    "email": "choroid.studio@gmail.com",
+    "url": "https://www.unity3d.com"
+  },
+  "type": "library",
+  "hideInEditor": true
+}

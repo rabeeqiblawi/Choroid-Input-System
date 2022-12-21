@@ -19,7 +19,6 @@ namespace Choroid.Input
             private set { }
         }
         public float maxVelocity = 2.5f;
-        private VelocityEstimator _velocityEstimator;
         public VelocityEstimator VelocityEstimator
         {
             get
@@ -29,18 +28,24 @@ namespace Choroid.Input
                 return _velocityEstimator;
             }
         }
-        private InputActionPhase _actionDetected = InputActionPhase.Waiting;
-        public override InputActionPhase Phase
+        public new InputActionPhase Phase
         {
             get => _actionDetected;
             set
             {
+
+                prevPhase = _phase;
+                _phase = value;
                 if (value == InputActionPhase.Performed)
                     DelayResetDetectedState();
             }
         }
+        private VelocityEstimator _velocityEstimator;
+        private InputActionPhase _actionDetected = InputActionPhase.Waiting;
 
-        private void DelayResetDetectedState()
+        public abstract void ResetAttributes(bool resetPhaseDirectly = false);
+
+        protected void DelayResetDetectedState()
         {
             this.Delay(() => Phase = InputActionPhase.Waiting, ResetTime);
         }

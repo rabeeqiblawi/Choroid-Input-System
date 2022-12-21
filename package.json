@@ -1,8 +1,8 @@
 {
   "name": "com.choroidstudio.input",
-  "version": "1.2.3",
+  "version": "0.8.0",
   "displayName": "Choroid Input System",
-  "description": "This is an example package",
+  "description": "VRGesture and VRPose Input system, depends on UNITY's Input System.",
   "unity": "2020.2",
   "unityRelease": "0b5",
   "documentationUrl": "https://example.com/",

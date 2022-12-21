@@ -11,14 +11,20 @@ namespace Choroid.Input
     public class CompositeInputDetector : InputDetector
     {
         //TODO make sequential VRAction.
-        public List<InputDetector> VRActions;
+        public List<InputDetector> Inputs;
 
-        public override InputActionPhase Phase { get; set; }
 
         public override void TryDetectAction()
         {
-            if (VRActions.TrueForAll(_ => _.Phase == InputActionPhase.Performed))
+
+            if (Inputs.TrueForAll(_ => _.Phase == InputActionPhase.Performed))
             {
+                Inputs.ForEach(input =>
+                {
+                    var gesture = input.GetComponent<VRGesture>();
+                    if (gesture != null)
+                        gesture.ResetAttributes(resetPhaseDirectly: true);
+                });
                 Phase = InputActionPhase.Performed;
                 OnActionPerformed.Invoke();
             }

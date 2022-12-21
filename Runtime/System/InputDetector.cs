@@ -9,33 +9,35 @@ using UnityEngine.InputSystem;
 
 namespace Choroid.Input
 {
-    public abstract class InputDetector : MonoBehaviour
+    public abstract class InputDetector : ChoroidBehavior
     {
-        public static Transform LeftControllerTransform;
-        public static Transform RightControllerTransform;
-        public static Transform HeadSetTransform;
-        public UnityEvent OnActionPerformed;
-        public abstract InputActionPhase Phase { get; set; }
 
-        protected void Start()
+        public UnityEvent OnActionPerformed;
+        public UnityEvent OnActionCancled;
+
+        protected InputActionPhase prevPhase;
+        protected InputActionPhase _phase;
+        public InputActionPhase Phase
         {
-            StartCoroutine(DetectActionCoroutine());
+            get
+            {
+                return _phase;
+            }
+            set
+            {
+                prevPhase = _phase;
+                _phase = value;
+            }
         }
-        public static void SetupTrackedDevicesForAllActions(Transform leftController, Transform rightController, Transform HMD)
+
+        private void Start()
         {
-            LeftControllerTransform = leftController;
-            RightControllerTransform = rightController;
-            HeadSetTransform = HMD;
+            Phase = InputActionPhase.Waiting;//todo trigger on device disconnect 
+        }
+        protected void Update()
+        {
+            TryDetectAction();
         }
         public abstract void TryDetectAction();
-        protected IEnumerator DetectActionCoroutine()
-        {
-            while (Phase == InputActionPhase.Waiting)
-            {
-                TryDetectAction();
-                yield return new WaitForEndOfFrame();
-            }
-            OnActionPerformed.Invoke();
-        }
     }
 }

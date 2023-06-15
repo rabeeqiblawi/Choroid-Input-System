@@ -7,9 +7,9 @@
   "changelogUrl": "https://example.com/changelog.html",
   "licensesUrl": "https://example.com/licensing.html",
   "dependencies": {
-    "com.unity.inputsystem": "> 0.7.0",
-    "com.unity.xr.interaction.toolkit": "> 2.3.2",
-    "com.unity.xr.management": "> 4.3.3"
+    "com.unity.inputsystem": ">=1.0.0",  
+    "com.unity.xr.interaction.toolkit": ">=2.3.2",
+    "com.unity.xr.management": ">=4.3.3"
   },
   "keywords": [
     "Choroid",

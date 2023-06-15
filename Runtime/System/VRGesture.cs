@@ -1,10 +1,10 @@
-using Choroid.Extentions;
+using ChoroidXR.Extentions;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Choroid.Input
+namespace ChoroidXR.VRposeInputMapper
 {
     [RequireComponent(typeof(VelocityEstimator))]
     public abstract class VRGesture : InputDetector

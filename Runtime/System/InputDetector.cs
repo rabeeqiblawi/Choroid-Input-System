@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 /// used as an input to trigger other game events.
 /// </summary>
 
-namespace Choroid.Input
+namespace ChoroidXR.VRposeInputMapper
 {
     public abstract class InputDetector : ChoroidBehavior
     {

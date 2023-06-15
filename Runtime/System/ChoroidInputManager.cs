@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Choroid.Input
+namespace ChoroidXR.VRposeInputMapper
 {
     public class ChoroidInputManager : MonoBehaviour
     {
@@ -15,5 +15,3 @@ namespace Choroid.Input
         }
     }
 }
-
-

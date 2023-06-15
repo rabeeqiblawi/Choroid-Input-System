@@ -1,4 +1,4 @@
-using Choroid.Extentions;
+using ChoroidXR.Extentions;
 using UnityEngine;
 
 /// <summary>

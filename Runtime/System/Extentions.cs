@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace Choroid.Extentions
+namespace ChoroidXR.Extentions
 {
     public static class Extentions
     {

@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-namespace Choroid.Input
+namespace ChoroidXR.VRposeInputMapper
 {
     public class InputAction : MonoBehaviour
     {

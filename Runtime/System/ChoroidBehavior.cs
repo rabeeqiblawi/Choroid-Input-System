@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Choroid.Input
+namespace ChoroidXR.VRposeInputMapper
 {
     public class ChoroidBehavior : MonoBehaviour
     {

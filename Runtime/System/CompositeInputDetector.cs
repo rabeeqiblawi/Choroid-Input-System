@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Choroid.Input
+namespace ChoroidXR.VRposeInputMapper
 {
     /// <summary>
     /// Uses multiple InputDetectors that will act as one when all are triggered.

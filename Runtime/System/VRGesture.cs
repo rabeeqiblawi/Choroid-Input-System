@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 
 namespace ChoroidXR.VRposeInputMapper
 {
-    [RequireComponent(typeof(VelocityEstimator))]
     public abstract class VRGesture : InputDetector
     {
         public float ResetTime = 0.8f;
@@ -23,8 +22,6 @@ namespace ChoroidXR.VRposeInputMapper
         {
             get
             {
-                if (_velocityEstimator == null)
-                    _velocityEstimator = GetComponent<VelocityEstimator>();
                 return _velocityEstimator;
             }
         }
@@ -40,7 +37,7 @@ namespace ChoroidXR.VRposeInputMapper
                     DelayResetDetectedState();
             }
         }
-        private VelocityEstimator _velocityEstimator;
+        [SerializeField] private VelocityEstimator _velocityEstimator;
         private InputActionPhase _actionDetected = InputActionPhase.Waiting;
 
         public abstract void ResetAttributes(bool resetPhaseDirectly = false);

@@ -2,13 +2,13 @@ using UnityEngine;
 
 namespace ChoroidXR.VRposeInputMapper
 {
-    public class ChoroidInputManager : MonoBehaviour
+    public class VRPoseInputManager : MonoBehaviour
     {
         public Transform leftController;
         public Transform rightController;
         public Transform hmd;
 
-        public static ChoroidInputManager Instance;
+        public static VRPoseInputManager Instance;
         private void Awake()
         {
             Instance = this;

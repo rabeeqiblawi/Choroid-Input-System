@@ -7,19 +7,19 @@ namespace ChoroidXR.VRposeInputMapper
 {
     public class ChoroidBehavior : MonoBehaviour
     {
-        private ChoroidInputManager _choroidInputManager;
-        protected ChoroidInputManager ChoroidInputManager
+        private VRPoseInputManager _choroidInputManager;
+        protected VRPoseInputManager ChoroidInputManager
         {
             get
             {
                 if (_choroidInputManager == null)
-                    _choroidInputManager = ChoroidInputManager.Instance;
+                    _choroidInputManager = VRPoseInputManager.Instance;
                 return _choroidInputManager;
             }
         }
 
-        public Transform LeftController => ChoroidInputManager.leftController;
-        public Transform RightController => ChoroidInputManager.rightController;
+        public Transform LeftControllerTransform => ChoroidInputManager.leftController;
+        public Transform RightControllerTransform => ChoroidInputManager.rightController;
         public Transform Hmd => ChoroidInputManager.hmd;
 
         public void Delay(Action action, float duration)

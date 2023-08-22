@@ -3,9 +3,9 @@
   "version": "0.8.0",
   "displayName": "Choroid Input System",
   "description": "VRGesture and VRPose Input system, depends on UNITY's Input System.",
-  "documentationUrl": "https://example.com/",
-  "changelogUrl": "https://example.com/changelog.html",
-  "licensesUrl": "https://example.com/licensing.html",
+  "documentationUrl": "https://github.com/rabeekiblawi/Choroid-Input-System",
+  "changelogUrl": "https://github.com/rabeekiblawi/Choroid-Input-System",
+  "licensesUrl": "https://github.com/rabeekiblawi/Choroid-Input-System",
   "dependencies": {
     "com.unity.inputsystem": "1.0.0",
     "com.unity.xr.interaction.toolkit": "2.3.2",
@@ -14,11 +14,13 @@
   "keywords": [
     "Choroid",
     "ChoroidVR",
-    "ChoroidVRInput"
+    "ChoroidVRInput",
+    "Poses and Gestures",
+    "Poses Input System"
   ],
   "author": {
-    "name": "ChoroidStudio",
-    "email": "choroid.studio@gmail.com",
+    "name": "Rabee Qiblawi",
+    "email": "rabeeqiblawi@gmail.com",
     "url": "https://www.unity3d.com"
   },
   "type": "library",

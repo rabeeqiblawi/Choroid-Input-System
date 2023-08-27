@@ -25,10 +25,10 @@ public class SoundDebugger
             return _audioSource;
         }
     }
-    public static SoundDebugger instance;
+    public static SoundDebugger Instance;
     private void Awake()
     {
-        instance = this;
+        Instance = this;
     }
     public void PLayDebugSound(DebugSound debugSound)
     {
@@ -66,6 +66,6 @@ public static partial class Extentions
 {
     public static void DebugSound(this MonoBehaviour mono, DebugSound debugSound)
     {
-        SoundDebugger.instance.PLayDebugSound(debugSound);
+        SoundDebugger.Instance.PLayDebugSound(debugSound);
     }
 }

@@ -15,20 +15,20 @@ public class VelocityEstimator : MonoBehaviour
 
     void Awake()
     {
-        _positoinFirstFrame = transform.position;
-        _positoinSecondFrame = transform.position;
+        _positoinFirstFrame = transform.localPosition;
+        _positoinSecondFrame = transform.localPosition;
     }
 
     void FixedUpdate()
     {
         if (_firstFrame)
         {
-            _positoinFirstFrame = transform.position;
+            _positoinFirstFrame = transform.localPosition;
             _firstFrame = false;
         }
         else
         {
-            _positoinSecondFrame = transform.position;
+            _positoinSecondFrame = transform.localPosition;
             _firstFrame = true;
             EstimatedVelocity = new Vector3(
                 (_positoinSecondFrame.x - _positoinFirstFrame.x) / Time.deltaTime,
